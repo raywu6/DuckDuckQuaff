@@ -1,7 +1,7 @@
 DuckDuckQuaff (Seong Hyeon "Ryan" Kim, Woosuk Lee, Raymond Wu)
 pd 08
 ---------------------
-[name of project]
+Wok Wok
 
 
 /////////// Zone of Reflection \\\\\\\\\\\
@@ -43,7 +43,7 @@ LESSONS LEARNED
 
 2018-05-28
 --------------------------------------------------------------
-Ryan Kim   :: 
-Woosuk Lee :: 
-Raymond Wu :: 
+Ryan Kim   :: Worked together to finalize final project idea
+Woosuk Lee :: Worked together to finalize final project idea
+Raymond Wu :: Worked together to finalize final project idea, uploaded proposal
 ==============================================================
