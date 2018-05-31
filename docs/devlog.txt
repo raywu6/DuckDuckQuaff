@@ -41,6 +41,13 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+2018-05-30
+--------------------------------------------------------------
+Ryan Kim   :: Worked together to create UML diagrams for prospective classes
+Woosuk Lee :: Worked together to create UML diagrams for prospective classes
+Raymond Wu :: Worked together to create UML diagrams for prospective classes, update devlog
+==============================================================
+
 2018-05-28
 --------------------------------------------------------------
 Ryan Kim   :: Worked together to finalize final project idea
