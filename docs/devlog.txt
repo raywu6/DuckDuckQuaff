@@ -54,3 +54,10 @@ Ryan Kim   :: Worked together to finalize final project idea
 Woosuk Lee :: Worked together to finalize final project idea
 Raymond Wu :: Worked together to finalize final project idea, uploaded proposal
 ==============================================================
+
+2018-06-01
+--------------------------------------------------------------
+Ryan Kim   :: Worked together to organize/plan out ideas for implementing the project idea
+Woosuk Lee :: Worked together to organize/plan out ideas for implementing the project idea, update devlog
+Raymond Wu :: Worked together to organize/plan out ideas for implementing the project idea
+==============================================================
