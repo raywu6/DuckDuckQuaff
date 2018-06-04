@@ -41,6 +41,12 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+2018-06-01
+--------------------------------------------------------------
+Ryan Kim   :: Worked together to organize/plan out ideas for implementing the project idea, started implementing Restaurant class
+Woosuk Lee :: Worked together to organize/plan out ideas for implementing the project idea, started implementing Customer class, update devlog
+Raymond Wu :: Worked together to organize/plan out ideas for implementing the project idea, started implementing Cook class
+
 2018-05-30
 --------------------------------------------------------------
 Ryan Kim   :: Worked together to create UML diagrams for prospective classes

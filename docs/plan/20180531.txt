@@ -1,0 +1,26 @@
+DuckDuckQuaff (Ryan Kim, Woosuk Lee, Raymond Wu) 
+APCS2 pd8 
+Final Project -- Wok Wok 
+2018-05-31
+
+It's most important right now to make sure our preparating is in order
+and to get verification (a green light) from Mr. Brown so that we can
+begin fleshing out the particulars of our project. Mr. Brown says that
+our project proposal sounds close to viability, which means we can start
+making more detailed UML diagrams to consider each of the elements that
+our simulation will need to run and achieve the tasks at hand.
+
+Core functionality constitutes a vanilla simulation so that we know the
+basics of our program works. The most important elements so far are
+that each customer orders one item only, that there is a set amount of
+customers that need to be dealt with each time, that the line of customers
+is a queue (priority queue to be implemented later on), and that the
+simulation ends when there are no more customers in the queue.
+
+A task that must be collaboratively tackled is our UML diagrams because
+we all need to be on the same page about how the classes interact with
+one another and that we have the same visualization of how the simulation
+works. The driver class must also be worked on collaboratively, but writing 
+the individual Cook and Customer classes and other small components can be
+delegated.
+

@@ -1,0 +1,25 @@
+DuckDuckQuaff (Ryan Kim, Woosuk Lee, Raymond Wu) 
+APCS2 pd8 
+Final Project -- Wok Wok 
+2018-06-04
+
+We've updated our UML diagram after receiving valuable feedback from Mr. Brown 
+to clean it up. We added new elements (inst vars, methods) that we saw would be 
+useful in the design of the program (i.e. modularity). The most important task 
+right now is to work on putting together the most basic version of this simulation 
+in order to launch by Monday evening. 
+
+In order to try to meet our deadline of Monday evening, we have planned a session 
+in the csDojo for Monday afternoon. Raymond will use the Issues tab to send an alert 
+at 11:30a as a reminder. In addition, he is using the Projects tab in order to 
+keep track of the tasks that must be completed prior to launching v1. 
+
+We will focus on core functionality in our first version. As outlined in our proposal, 
+our first version will consist of a simulation with a predetermined amount of customers 
+in which each customer orders one item only. We will expand on this concept by randomizing 
+the amount of customers to be dealt with and the amount of items a customer orders, but 
+we only want to implement these features after we know that the most basic 
+conceptualization of our simulation works. 
+
+We will finalize on Monday the days in which we will coordinate in the csDojo 
+(aside from Monday) and the times we will coordinate on Tuesday and Thursday. 
