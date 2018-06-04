@@ -42,7 +42,8 @@ public class Cook {
 
     public int binarySearch(String[] arr, String target, int lo, int hi) {
 
-	while (left <= right) {
+	// bounds have not crossed
+	while (lo <= hi) {
 	    int med = (lo + hi) / 2;
 
 	    // if found target
@@ -60,17 +61,21 @@ public class Cook {
 
 	return -1;  // target not found
     }
-    
+
     
     public void addIngredient(String str) {
-	if ( find(str) != -1 ) {
+
+	int index = find(str);
+	
+	// if str is valid item in restaurant's inventory
+	if ( index != -1 ) {
 
 	    // if already have ingredient in hand
 	    if ( ingredientsOnHand.contains(str) )
-		System.out.pritnln("You already have this item!");
+		System.out.println("You already have this item!");
 	    
 	    else
-		ingredientsOnHand.add(str);
+		ingredientsOnHand.add( Restaurant.inventory[index] );
 	}
 	
 	else
@@ -88,7 +93,7 @@ public class Cook {
     }
 
     
-    public cook() {
+    public boolean cook() {
 	// if every item in ingredientsOnHand matches w/ ones
 	// as defined by Customer's order
     }
