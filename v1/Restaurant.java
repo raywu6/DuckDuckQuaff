@@ -4,6 +4,7 @@ public class Restaurant{
 
     private String restaurantName;
     public static String[] inventory;
+    //TODO: ADD QUEUE FOR CUSTOMERS
 
     public Restaurant(){
     }
@@ -12,13 +13,6 @@ public class Restaurant{
 	restaurantName = rName;
     }
 
-    // public void openMenu() {
-	
-    //}
-
-    /* This is the introduction
-     *
-     */
     public void intro(){
 	System.out.println("Have you determined a name for your new restaurant?");
 	String a = Keyboard.readString();
@@ -84,13 +78,18 @@ public class Restaurant{
     }
     
     public static void main( String[] args ){
-	Restaurant Admin = new Restaurant();
+	Restaurant admin = new Restaurant();
+
 	System.out.println("Blah blah blah... you got a restaurant blah blah blah");
 
-	Admin.intro();
+	admin.intro();
 
-	Admin.display();
-		
+	//TODO: MAKE COOK FRED FOR THIS
+	//	String name = Keyboard.readString();
+	//      Cook fred = new Cook(name);
+	
+	admin.display();
+
     }
 
 }
