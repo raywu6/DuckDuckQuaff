@@ -63,9 +63,16 @@ public class Cook {
     
     
     public void addIngredient(String str) {
-	if ( find(str) != -1 )
-	    // to do: if not already in hand
-	    ingredientsOnHand.add(str);
+	if ( find(str) != -1 ) {
+
+	    // if already have ingredient in hand
+	    if ( ingredientsOnHand.contains(str) )
+		System.out.pritnln("You already have this item!");
+	    
+	    else
+		ingredientsOnHand.add(str);
+	}
+	
 	else
 	    System.out.println("This item is not in the restaurant's inventory!");
     }
