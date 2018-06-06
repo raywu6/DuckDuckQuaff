@@ -85,8 +85,8 @@ public class Restaurant{
     }
 
     public void A(){
-	Customer woosuk = new Customer("Woosuk");
-	customerList.add();
+	Customer woosuk = new Customer("I want Hamburger!");
+	customerList.enqueue(woosuk);
     }
 
     public String dashboard(){
