@@ -3,7 +3,11 @@ APCS2 final project, by Seong Hyeon (Ryan) Kim, Woosuk Lee, Raymond Wu
 
 ## Wok Wok
 ### What the user sees
-When the user launches the program, they are prompted to input a username for the simulation to refer to. Immediately afterward, the clock begins ticking, and the suggested time of completing all of the tasks in the simulation is indicated. The user receives the first order, and has a user-input menu selection where he or she may check the "recipe" for the order (list of ingredients needed), gather ingredients, or cook the menu item with the ingredients they currently have on hand. After the first customer has been dealt with, the next customer's order is shown, and the process repeats until the user has successfully dealt with all of the customers in the simulation. The clock then stops ticking, and the salary based on how many orders were successfully completed and whether or not the simulation was completed within the suggested time is shown.
+* When the user launches the program, they are prompted to input a username for the simulation to refer to. 
+* Immediately afterward, the clock begins ticking, and the suggested time of completing all of the tasks in the simulation is indicated. 
+* The user receives the first order, and has a user-input menu selection where he or she may check the "recipe" for the order (list of ingredients needed), gather ingredients, or cook the menu item with the ingredients they currently have on hand. 
+* After the first customer has been dealt with, the next customer's order is shown, and the process repeats until the user has successfully dealt with all of the customers in the simulation. 
+* The clock then stops ticking, and the salary based on how many orders were successfully completed and whether or not the simulation was completed within the suggested time is shown.
 
 ### How it works
 * When the user launches the program, the username prompt is initiated by calling the `readString()` method in `cs1/Keyboard.java`.
