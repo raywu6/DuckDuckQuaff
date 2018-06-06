@@ -1,12 +1,18 @@
 import cs1.Keyboard;
 
-public class Restaurant{
+import java.util.HashMap
+
+    
+    public class Restaurant{
 
     private String restaurantName;
     public static String[] inventory;
     public ALQueue<Customer> customerList;
+    public HashMap<String,String[]> menu;
 
     public Restaurant(){
+	String[] inventory = { "Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Suger", "Tomato" };
+	customerList = new ALQueue();
     }
     
     public void setRestaurantName( String rName ){
@@ -35,9 +41,6 @@ public class Restaurant{
     }
 
     public void makeCook(){
-	//TODO: MAKE COOK FRED FOR THIS
-	//	String name = Keyboard.readString();
-	//      Cook fred = new Cook(name);
 	System.out.println("Now that you have your own restaurant, you'll need a cook. Have you determined a name for your cook? (Type Yes/No)");
 	String a = Keyboard.readString();
 	if ( a.equalsIgnoreCase("Yes") ){
@@ -65,17 +68,20 @@ public class Restaurant{
 	int a = Keyboard.readInt();
 	if ( a == 1 ){
 	    System.out.println("<A>");
-	    //Call A
+	    //Call A: Get recipe
+	    
 	    return;
 	}
 	if ( a == 2 ){
 	    System.out.println("<B>");
-	    //Call B
+	    //Call B: Look for ingredients
+	    
 	    return;
 	}
 	if ( a == 3 ){
 	    System.out.println("<C>");
-	    //Call C
+	    //Call C: Cook!
+	    
 	    return;
 	}    
 	else{
@@ -87,6 +93,10 @@ public class Restaurant{
     public void A(){
 	Customer woosuk = new Customer("I want Hamburger!");
 	customerList.enqueue(woosuk);
+    }
+    
+    public void B(){
+	customerList.peekFront().getOrder();
     }
 
     public String dashboard(){
