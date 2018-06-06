@@ -90,12 +90,19 @@ public class Cook {
 	    if ( s.equals(str) )
 		ingredientsOnHand.remove(s);
 	}
+	//TODO: ADD RETURN VALUE
+	//PLACED "" FOR NOW
+	return "";
     }
 
     
     public boolean cook() {
 	// if every item in ingredientsOnHand matches w/ ones
 	// as defined by Customer's order
+
+	//TODO: ADD RETURN VALUE
+	//PLACED true FOR NOW
+	return true;
     }
 
     // for testing only
