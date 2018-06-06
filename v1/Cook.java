@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class Cook {
 
     // inst vars
-    public String name;
-    private ArrayList<String> ingredientsOnHand;
+    public String name; // *************************8  if not used delete...
+    public ArrayList<String> ingredientsOnHand;
     private double salary;
 
     // we chose to use an ArrayList
@@ -70,7 +70,7 @@ public class Cook {
 	// if str is valid item in restaurant's inventory
 	if ( index != -1 ) {
 
-	    // if already have ingredent in hand
+	    // if already have ingredient in hand
 	    if ( ingredientsOnHand.contains(str) )
 		System.out.println("You already have this item!");
 	    
@@ -80,6 +80,7 @@ public class Cook {
 	
 	else
 	    System.out.println("This item is not in the restaurant's inventory!");
+	
     }
 
 
@@ -105,8 +106,26 @@ public class Cook {
 	// if every item in ingredientsOnHand matches w/ ones
 	// defined by Customer's order	
 	
-	return matching( ingredientsOnHand,
-			 Restaurant.menu.get(getNextOrder()) );
+        if ( matching( ingredientsOnHand,
+		       Restaurant.menu.get(getNextOrder()) ) ) {
+	    System.out.println("Success! Customer dequeued. +$10");
+	    setMoney(10);
+	    Restaurant.customerQueue.dequeue();
+	    ingredientsOnHand.clear();
+
+	    return true;
+	}
+
+	// reach here means false
+
+	System.out.println("The items you have do not make the item the customer ordered!");
+	System.out.println("Your hand's ingredients has been cleared...");
+	System.out.println("The customer is still waiting for his order...");
+
+	ingredientsOnHand.clear();
+
+	return false;
+	    
 
     }
 
@@ -115,6 +134,11 @@ public class Cook {
     public static boolean matching (ArrayList<String> arr1, ArrayList<String> arr2) {
 
 	boolean found;
+
+	if ( arr1.size() != arr2.size() )
+	    return false;
+
+	// else ... reach here means sizes are same
 	
 	for (String s1 : arr1) {
 	    found = false;

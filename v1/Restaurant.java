@@ -13,10 +13,10 @@ public class Restaurant{
     public static HashMap<String,ArrayList<String>> menu;
     private String itemA, itemB, itemC, itemD, itemE;
     private ArrayList<String> aIng, bIng, cIng, dIng, eIng;
-    private static Cook myCook;
+    private static Cook adam;
 
     public Restaurant(){
-	ArrayList<String> inventory = new ArrayList<String>();
+	inventory = new ArrayList<String>();
 	inventory.add("Bacon");
 	inventory.add("Black Tea");
 	inventory.add("Bread");
@@ -30,7 +30,8 @@ public class Restaurant{
 	inventory.add("Tomato");
 	//"Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Sugar", "Tomato"};
 	
-	ALQueue<Customer> customerQueue = new ALQueue<Customer>();
+	customerQueue = new ALQueue<Customer>();
+	
 	for (int i = 0; i < 10; i++) {
 	    Customer fred = new Customer();
 	    fred.setOrder();
@@ -42,43 +43,41 @@ public class Restaurant{
     }
 
     public void setupMenu(){
-	String itemA = "BLT";
-	String itemB = "Cheeseburger";
-	String itemC = "Hamburger";
-	String itemD = "Hot Dog";
-	String itemE = "Thai Tea";
+	itemA = "BLT";
+	itemB = "Cheeseburger";
+	itemC = "Hamburger";
+	itemD = "Hot Dog";
+	itemE = "Thai Tea";
 
-	ArrayList<String> aIng = new ArrayList<String>();
+	aIng = new ArrayList<String>();
         aIng.add("Bacon");
 	aIng.add("Bread");
 	aIng.add("Lettuce");
 	aIng.add("Tomato");
-	ArrayList<String> bIng = new ArrayList<String>();
+	
+        bIng = new ArrayList<String>();
         bIng.add("Bread");
 	bIng.add("Burger");
 	bIng.add("Cheese");
 	bIng.add("Lettuce");
 	bIng.add("Tomato");
-	ArrayList<String> cIng = new ArrayList<String>();
+	
+        cIng = new ArrayList<String>();
         cIng.add("Bread");
 	cIng.add("Burger");
 	cIng.add("Lettuce");
 	cIng.add("Tomato");
-	ArrayList<String> dIng = new ArrayList<String>();
+	
+	dIng = new ArrayList<String>();
         dIng.add("Bread");
 	dIng.add("Ketchup");
 	dIng.add("Sausage");
-	ArrayList<String> eIng = new ArrayList<String>();
+	
+	eIng = new ArrayList<String>();
 	eIng.add("Black Tea");
         eIng.add("Milk");
 	eIng.add("Sugar");
-	
-	//String[] aIng = {"bacon", "bread", "lettuce", "tomato"};
-	//String[] bIng = {"bread", "burger", "cheese", "lettuce", "tomato"};
-	//String[] cIng = {"bread", "burger", "lettuce", "tomato"};
-	//String[] dIng = {"bread", "ketchup", "sausage"};
-	//String[] eIng = {"black tea", "milk", "sugar"};
-	
+        
 	menu.put(itemA, aIng);
 	menu.put(itemB, bIng);
 	menu.put(itemC, cIng);
@@ -112,37 +111,37 @@ public class Restaurant{
 	restaurantName = rName;
     }
     
-    public void makeCook(){
-        System.out.println("\n");
-	System.out.println("Now that you have your own restaurant, you'll need a cook. Have you determined a name for your cook? (Type Yes/No)");
-        System.out.println("\n");
+    // public void makeCook(){
+    //     System.out.println("\n");
+    // 	System.out.println("Now that you have your own restaurant, you'll need a cook. Have you determined a name for your cook? (Type Yes/No)");
+    //     System.out.println("\n");
 
-	String a = Keyboard.readString();
+    // 	String a = Keyboard.readString();
 
-        System.out.println("\n");
+    //     System.out.println("\n");
 
-	if ( a.equalsIgnoreCase("Yes") ){
-	    System.out.println("Okay! What is your cook's name?");
+    // 	if ( a.equalsIgnoreCase("Yes") ){
+    // 	    System.out.println("Okay! What is your cook's name?");
 	    
-	    System.out.println("\n");
+    // 	    System.out.println("\n");
 	
-	    String b = Keyboard.readString();
-	    cookName = b;
+    // 	    String b = Keyboard.readString();
+    // 	    cookName = b;
 	    
-	    myCook = new Cook(b);
-	    System.out.println(cookName+"? Welcome to the team! Lets get started by heading over to the dashboard!");
-	    return;
-	}
-	if ( a.equalsIgnoreCase("No") ){
-	    System.out.println("No worries, take your time!");
-	    makeCook();
-	}    
-	else{
-	    System.out.println("Sorry I didn't quite get that...");
-	    makeCook();
-	}
+    // 	    myCook = new Cook(b);
+    // 	    System.out.println(cookName+"? Welcome to the team! Lets get started by heading over to the dashboard!");
+    // 	    return;
+    // 	}
+    // 	else if ( a.equalsIgnoreCase("No") ){
+    // 	    System.out.println("No worries, take your time!");
+    // 	    makeCook();
+    // 	}    
+    // 	else{
+    // 	    System.out.println("Sorry I didn't quite get that...");
+    // 	    makeCook();
+    // 	}
 
-    }
+    // }
     
     public void display(){
 	System.out.println("Here is your dashboard for today.");
@@ -150,26 +149,30 @@ public class Restaurant{
 	System.out.println("Select 1, 2, or 3.");
 	int a = Keyboard.readInt();
 	if ( a == 1 ){
-	    System.out.println("GET RECIPE...");
+	    System.out.print("GET RECIPE... ");
 	    //Call A: Get recipe
 	    Customer nextCust = customerQueue.peekFront();
 	    String orderedItem = nextCust.getOrder();
 	    ArrayList<String> ingred = menu.get(orderedItem);
+
+	    System.out.println(ingred);
+	    
 	    return;
 	}
 	if ( a == 2 ){
 	    System.out.println("GATHERING INGREDIENTS...");
 	    //Call B: Look for ingredients
 	    System.out.println(inventory);  // show inventory to user
-	    
+
+	    System.out.print("Select an item to add to your hand... ");
 	    String input = Keyboard.readString();
-	    myCook.addIngredient(input);
+	    adam.addIngredient(input);
 	    return;
 	}
 	if ( a == 3 ){
 	    System.out.println("COOK...");
 	    //Call C: Cook!
-	    
+	    adam.cook();
 	    return;
 	}    
 	else{
@@ -201,17 +204,22 @@ public class Restaurant{
     
     public static void main( String[] args ){
 	Restaurant admin = new Restaurant();
-
-	admin.customerQueue = new ALQueue<Customer>();
 	
 	System.out.println("Blah blah blah... you got a restaurant blah blah blah");
-
 	admin.intro();
 
-	admin.makeCook();	
-	
-	admin.display();
+	adam = new Cook();
 
+	while ( ! admin.customerQueue.isEmpty() ) {
+
+	    String formatHand = "Currently in hand: [";
+	    for (String item : adam.ingredientsOnHand) 
+		formatHand += item + ",";
+	    System.out.println( formatHand + "]" );
+	   
+	    
+	    admin.display();
+	} // end while loop
     }
 
 }
