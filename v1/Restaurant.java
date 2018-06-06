@@ -9,7 +9,7 @@ public class Restaurant{
 
     private String restaurantName, cookName;
     public static ArrayList<String> inventory;
-    public ALQueue<Customer> customerQueue;
+    public static ALQueue<Customer> customerQueue;
     public static HashMap<String,ArrayList<String>> menu;
     private String itemA, itemB, itemC, itemD, itemE;
     private ArrayList<String> aIng, bIng, cIng, dIng, eIng;

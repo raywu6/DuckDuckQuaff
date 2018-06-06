@@ -136,9 +136,8 @@ public class Cook {
     // helper method for cook()
     public static String getNextOrder() {
 	
-	Customer custObj = Restaurant.customerQueue.get(0);
+	Customer custObj = Restaurant.customerQueue.peekFront();
 	String order = custObj.getOrder();
-
 	return order;
     }
     
