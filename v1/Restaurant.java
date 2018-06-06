@@ -1,9 +1,9 @@
 import cs1.Keyboard;
 
-import java.util.HashMap
+import java.util.HashMap;
 
     
-    public class Restaurant{
+public class Restaurant{
 
     private String restaurantName;
     public static String[] inventory;
@@ -12,9 +12,24 @@ import java.util.HashMap
 
     public Restaurant(){
 	String[] inventory = { "Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Suger", "Tomato" };
-	customerList = new ALQueue();
+	customerList = new ALQueue<Customer>();
+	for (int i = 0; i < 10; i++) {
+	    Customer fred = new Customer();
+	    fred.setOrder();
+	    customerList.enqueue(fred);
+	}
+	menu = new HashMap<String,String[]>(5);
+	setupMenu();
     }
-    
+
+    public void setupMenu(){
+	//menu.put(String "BLT", String[] {"Bacon", "Bread", "Lettuce", "Tomato"});
+	//menu.put(String "Cheeseburger", String[] {"Bread", "Burger", "Cheese", "Lettuce", "Tomato"});
+	//menu.put(String "Hamburger", String[] {"Bread", "Burger", "Cheese", "Lettuce", "Tomato"});
+	//menu.put(String "Hot Dog", String[] {"Bread", "Ketchup", "Sausage"});
+	//menu.put(String "Thai Tea", String[] {"Black Tea", "Milk", "Sugar"});
+    }
+
     public void setRestaurantName( String rName ){
 	restaurantName = rName;
     }
@@ -88,15 +103,6 @@ import java.util.HashMap
 	    System.out.println("Sorry I didn't quite get that...");
 	    dashboard();
 	}
-    }
-
-    public void A(){
-	Customer woosuk = new Customer("I want Hamburger!");
-	customerList.enqueue(woosuk);
-    }
-    
-    public void B(){
-	customerList.peekFront().getOrder();
     }
 
     public String dashboard(){
