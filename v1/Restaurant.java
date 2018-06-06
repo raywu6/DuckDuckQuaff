@@ -7,35 +7,37 @@ public class Restaurant{
 
     private String restaurantName, cookName;
     public static String[] inventory;
-    public ALQueue<Customer> customerList;
+    public ALQueue<Customer> customerQueue;
     public HashMap<String,String[]> menu;
-    public String itemA, itemB, itemC, itemD, itemE;
-    public String[] aIng, bIng, cIng, dIng, eIng;
+    private String itemA, itemB, itemC, itemD, itemE;
+    private String[] aIng, bIng, cIng, dIng, eIng;
 
     public Restaurant(){
-	String[] inventory = { "Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Suger", "Tomato" };
-	ALQueue<Customer> customerList = new ALQueue<Customer>();
+	String[] inventory = {"bacon", "black tea", "bread", "burger", "ketchup", "lettuce", "milk", "sausage", "sugar", "tomato"};
+	
+	ALQueue<Customer> customerQueue = new ALQueue<Customer>();
 	for (int i = 0; i < 10; i++) {
 	    Customer fred = new Customer();
 	    fred.setOrder();
-	    customerList.enqueue(fred);
+	    customerQueue.enqueue(fred);
 	}
+	
 	menu = new HashMap<String,String[]>(5);
 	setupMenu();
     }
 
     public void setupMenu(){
 	String itemA = "BLT";
-	String itemB = "Cheeseburger";
-	String itemC = "Hamburger";
-	String itemD = "Hot Dog";
-	String itemE = "Thai Tea";
+	String itemB = "cheeseburger";
+	String itemC = "hamburger";
+	String itemD = "hot dog";
+	String itemE = "Thai tea";
 
-	String[] aIng = {"Bacon", "Bread", "Lettuce", "Tomato"};
-	String[] bIng = {"Bread", "Burger", "Cheese", "Lettuce", "Tomato"};
-	String[] cIng = {"Bread", "Burger", "Lettuce", "Tomato"};
-	String[] dIng = {"Bread", "Ketchup", "Sausage"};
-	String[] eIng = {"Black Tea", "Milk", "Sugar"};
+	String[] aIng = {"bacon", "bread", "lettuce", "tomato"};
+	String[] bIng = {"bread", "burger", "cheese", "lettuce", "tomato"};
+	String[] cIng = {"bread", "burger", "lettuce", "tomato"};
+	String[] dIng = {"bread", "ketchup", "sausage"};
+	String[] eIng = {"black tea", "milk", "sugar"};
 	
 	menu.put(itemA, aIng);
 	menu.put(itemB, bIng);
@@ -154,7 +156,7 @@ public class Restaurant{
     public static void main( String[] args ){
 	Restaurant admin = new Restaurant();
 
-	admin.customerList = new ALQueue<Customer>();
+	admin.customerQueue = new ALQueue<Customer>();
 	
 	System.out.println("Blah blah blah... you got a restaurant blah blah blah");
 

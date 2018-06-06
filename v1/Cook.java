@@ -85,25 +85,63 @@ public class Cook {
 
     public String removeIngredient(String str) {
 
+	String retStr = "";
+	
 	// takes care of erroneous duplicates
 	for (String s : ingredientsOnHand) {
-	    if ( s.equals(str) )
+	    
+	    if ( s.equals(str) ) {
+		retStr = s;
 		ingredientsOnHand.remove(s);
-	}
-	//TODO: ADD RETURN VALUE
-	//PLACED "" FOR NOW
-	return "";
+	    }
+	} // end for-loop
+
+	return retStr;
     }
 
-    
-    public boolean cook() {
-	// if every item in ingredientsOnHand matches w/ ones
-	// as defined by Customer's order
 
-	//TODO: ADD RETURN VALUE
-	//PLACED true FOR NOW
+    public boolean cook() {
+
+	// if every item in ingredientsOnHand matches w/ ones
+	// defined by Customer's order	
+	
+	return matching( ingredientsOnHand,
+			 Restaurant.menu.get(getNextOrder()) );
+
+    }
+
+
+    // helper method for cook()
+    public static boolean matching (String[] arr1, String[] arr2) {
+
+	boolean found;
+	
+	for (String s1 : arr1) {
+	    found = false;
+	    
+	    for (String s2 : arr2) {
+		if ( s1.equals(s2) )
+		    found = true;
+		
+	    }
+
+	    if (found == false)
+		return false;
+	}
+
 	return true;
     }
+	
+
+    // helper method for cook()
+    public static String getNextOrder() {
+	
+	Customer custObj = Restaurant.customerQueue.get(0);
+	String order = custObj.getOrder();
+
+	return order;
+    }
+    
 
     // for testing only
     public static void main (String[] args) {
@@ -114,8 +152,6 @@ public class Cook {
 	Cook b = new Cook("Fred");
 	System.out.println("name: " + b.name);
 	System.out.println("salary: " + b.salary);
-
-	
 	
     } // end main method
 	
