@@ -1,19 +1,33 @@
 import cs1.Keyboard;
 
+import java.util.ArrayList;
+
 import java.util.HashMap;
 
     
 public class Restaurant{
 
     private String restaurantName, cookName;
-    public static String[] inventory;
+    public static ArrayList<String> inventory;
     public ALQueue<Customer> customerQueue;
-    public HashMap<String,String[]> menu;
+    public static HashMap<String,ArrayList<String>> menu;
     private String itemA, itemB, itemC, itemD, itemE;
-    private String[] aIng, bIng, cIng, dIng, eIng;
+    private ArrayList<String> aIng, bIng, cIng, dIng, eIng;
 
     public Restaurant(){
-	String[] inventory = {"bacon", "black tea", "bread", "burger", "ketchup", "lettuce", "milk", "sausage", "sugar", "tomato"};
+	ArrayList<String> inventory = new ArrayList<String>();
+	inventory.add("Bacon");
+	inventory.add("Black Tea");
+	inventory.add("Bread");
+	inventory.add("Burger");
+	inventory.add("Cheese");
+	inventory.add("Ketchup");
+	inventory.add("Lettuce");
+	inventory.add("Milk");
+	inventory.add("Sausage");
+	inventory.add("Sugar");
+	inventory.add("Tomato");
+	//"Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Sugar", "Tomato"};
 	
 	ALQueue<Customer> customerQueue = new ALQueue<Customer>();
 	for (int i = 0; i < 10; i++) {
@@ -22,22 +36,47 @@ public class Restaurant{
 	    customerQueue.enqueue(fred);
 	}
 	
-	menu = new HashMap<String,String[]>(5);
+	menu = new HashMap<String,ArrayList<String>>(5);
 	setupMenu();
     }
 
     public void setupMenu(){
 	String itemA = "BLT";
-	String itemB = "cheeseburger";
-	String itemC = "hamburger";
-	String itemD = "hot dog";
-	String itemE = "Thai tea";
+	String itemB = "Cheeseburger";
+	String itemC = "Hamburger";
+	String itemD = "Hot Dog";
+	String itemE = "Thai Tea";
 
-	String[] aIng = {"bacon", "bread", "lettuce", "tomato"};
-	String[] bIng = {"bread", "burger", "cheese", "lettuce", "tomato"};
-	String[] cIng = {"bread", "burger", "lettuce", "tomato"};
-	String[] dIng = {"bread", "ketchup", "sausage"};
-	String[] eIng = {"black tea", "milk", "sugar"};
+	ArrayList<String> aIng = new ArrayList<String>();
+        aIng.add("Bacon");
+	aIng.add("Bread");
+	aIng.add("Lettuce");
+	aIng.add("Tomato");
+	ArrayList<String> bIng = new ArrayList<String>();
+        bIng.add("Bread");
+	bIng.add("Burger");
+	bIng.add("Cheese");
+	bIng.add("Lettuce");
+	bIng.add("Tomato");
+	ArrayList<String> cIng = new ArrayList<String>();
+        cIng.add("Bread");
+	cIng.add("Burger");
+	cIng.add("Lettuce");
+	cIng.add("Tomato");
+	ArrayList<String> dIng = new ArrayList<String>();
+        dIng.add("Bread");
+	dIng.add("Ketchup");
+	dIng.add("Sausage");
+	ArrayList<String> eIng = new ArrayList<String>();
+	eIng.add("Black Tea");
+        eIng.add("Milk");
+	eIng.add("Sugar");
+	
+	//String[] aIng = {"bacon", "bread", "lettuce", "tomato"};
+	//String[] bIng = {"bread", "burger", "cheese", "lettuce", "tomato"};
+	//String[] cIng = {"bread", "burger", "lettuce", "tomato"};
+	//String[] dIng = {"bread", "ketchup", "sausage"};
+	//String[] eIng = {"black tea", "milk", "sugar"};
 	
 	menu.put(itemA, aIng);
 	menu.put(itemB, bIng);

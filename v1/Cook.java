@@ -4,7 +4,7 @@ public class Cook {
 
     // inst vars
     public String name;
-    private ArrayList<String> ingredientsOnHand;
+    private ArrayList<String> ingredientsOnHand; 
     private double salary;
 
     // we chose to use an ArrayList
@@ -12,7 +12,7 @@ public class Cook {
     
     public Cook() {
 	name = "John Doe";
-	ingredientsOnHand = new ArrayList<String>();
+        ingredientsOnHand = new ArrayList<String>();
 	salary = 0;
     }
 
@@ -33,25 +33,25 @@ public class Cook {
 
 
     public int find(String str) {
-	String[] inv = Restaurant.inventory;
-	int indexLastElem = Restaurant.inventory.length - 1;
+	ArrayList<String> inv = Restaurant.inventory;
+	int indexLastElem = Restaurant.inventory.size() - 1;
 	
 	return binarySearch(inv, str, 0, indexLastElem);
     }
 
 
-    public int binarySearch(String[] arr, String target, int lo, int hi) {
+    public int binarySearch(ArrayList<String> arr, String target, int lo, int hi) {
 
 	// bounds have not crossed
 	while (lo <= hi) {
 	    int med = (lo + hi) / 2;
 
 	    // if found target
-	    if ( arr[med].compareTo(target) == 0 )
+	    if ( arr.get(med).compareTo(target) == 0 )
 		return med;
 
 	    // target < med, look at lower half of data
-	    else if ( arr[med].compareTo(target) > 0 )
+	    else if ( arr.get(med).compareTo(target) > 0 )
 		hi = med - 1;
 
 	    // target > med, look at upper half of data
@@ -75,7 +75,7 @@ public class Cook {
 		System.out.println("You already have this item!");
 	    
 	    else
-		ingredientsOnHand.add( Restaurant.inventory[index] );
+		ingredientsOnHand.add( Restaurant.inventory.get(index) );
 	}
 	
 	else
@@ -112,7 +112,7 @@ public class Cook {
 
 
     // helper method for cook()
-    public static boolean matching (String[] arr1, String[] arr2) {
+    public static boolean matching (ArrayList<String> arr1, ArrayList<String> arr2) {
 
 	boolean found;
 	
