@@ -1,14 +1,10 @@
 import cs1.Keyboard;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
-
 public class Restaurant{
 
     private String restaurantName;
     public static String[] inventory;
-    public Queue<Customer> customerList;
+    public ALQueue<Customer> customerList;
 
     public Restaurant(){
     }
@@ -108,7 +104,7 @@ public class Restaurant{
     public static void main( String[] args ){
 	Restaurant admin = new Restaurant();
 
-	admin.customerList = new LinkedList<>();
+	admin.customerList = new ALQueue<Customer>();
 	
 	System.out.println("Blah blah blah... you got a restaurant blah blah blah");
 
