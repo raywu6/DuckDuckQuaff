@@ -79,7 +79,7 @@ public class Restaurant{
 	//String[] dIng = {"bread", "ketchup", "sausage"};
 	//String[] eIng = {"black tea", "milk", "sugar"};
 	
-	menu.put(itemA, aIng);
+	menu.put("BLT", {"bacon", "bread", "lettuce", "tomato"});
 	menu.put(itemB, bIng);
 	menu.put(itemC, cIng);
 	menu.put(itemD, dIng);
@@ -150,7 +150,7 @@ public class Restaurant{
 	System.out.println("Select 1, 2, or 3.");
 	int a = Keyboard.readInt();
 	if ( a == 1 ){
-	    System.out.println("<A>");
+	    System.out.println("GET RECIPE...");
 	    //Call A: Get recipe
 	    Customer nextCust = customerQueue.peekFront();
 	    String orderedItem = nextCust.getOrder();
@@ -158,7 +158,7 @@ public class Restaurant{
 	    return;
 	}
 	if ( a == 2 ){
-	    System.out.println("<B>");
+	    System.out.println("GATHERING INGREDIENTS...");
 	    //Call B: Look for ingredients
 	    System.out.println(inventory);  // show inventory to user
 	    
@@ -167,7 +167,7 @@ public class Restaurant{
 	    return;
 	}
 	if ( a == 3 ){
-	    System.out.println("<C>");
+	    System.out.println("COOK...");
 	    //Call C: Cook!
 	    
 	    return;
@@ -190,11 +190,11 @@ public class Restaurant{
 	retStr += "\n";
 	retStr += "--------------------";
 	retStr += "\n";
-	retStr += "(1)|<A>---";
+	retStr += "(1)|<Get recipe>---";
 	retStr += "\n";
-	retStr += "(2)|<B>---";
+	retStr += "(2)|<Gather ingredients>---";
 	retStr += "\n";
-	retStr += "(3)|<C>---";
+	retStr += "(3)|<Cook>---";
 	retStr += "\n";
 	return retStr;
     }
