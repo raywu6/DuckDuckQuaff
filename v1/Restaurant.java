@@ -1,12 +1,18 @@
 import cs1.Keyboard;
 
-public class Restaurant{
+import java.util.HashMap
+
+    
+    public class Restaurant{
 
     private String restaurantName;
     public static String[] inventory;
-    //TODO: ADD QUEUE FOR CUSTOMERS
+    public ALQueue<Customer> customerList;
+    public HashMap<String,String[]> menu;
 
     public Restaurant(){
+	String[] inventory = { "Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Suger", "Tomato" };
+	customerList = new ALQueue();
     }
     
     public void setRestaurantName( String rName ){
@@ -14,7 +20,7 @@ public class Restaurant{
     }
 
     public void intro(){
-	System.out.println("Have you determined a name for your new restaurant?");
+	System.out.println("Have you determined a name for your new restaurant? (Type Yes/No)");
 	String a = Keyboard.readString();
 	if ( a.equalsIgnoreCase("Yes") ){
 	    System.out.println("Okay! What is the name you chose?");
@@ -34,6 +40,27 @@ public class Restaurant{
 
     }
 
+    public void makeCook(){
+	System.out.println("Now that you have your own restaurant, you'll need a cook. Have you determined a name for your cook? (Type Yes/No)");
+	String a = Keyboard.readString();
+	if ( a.equalsIgnoreCase("Yes") ){
+	    System.out.println("Okay! What is your cook's name?");
+	    String b = Keyboard.readString();    
+	    Cook myCook = new Cook(b);
+	    System.out.println(b+"? Welcome to the team! Lets get started by heading over to the dashboard!");
+	    return;
+	}
+	if ( a.equalsIgnoreCase("No") ){
+	    System.out.println("No worries, take your time!");
+	    makeCook();
+	}    
+	else{
+	    System.out.println("Sorry I didn't quite get that...");
+	    makeCook();
+	}
+
+    }
+    
     public void display(){
 	System.out.println("Here is your dashboard for today.");
 	System.out.println(dashboard());
@@ -41,23 +68,35 @@ public class Restaurant{
 	int a = Keyboard.readInt();
 	if ( a == 1 ){
 	    System.out.println("<A>");
-	    //Call A
+	    //Call A: Get recipe
+	    
 	    return;
 	}
 	if ( a == 2 ){
 	    System.out.println("<B>");
-	    //Call B
+	    //Call B: Look for ingredients
+	    
 	    return;
 	}
 	if ( a == 3 ){
 	    System.out.println("<C>");
-	    //Call C
+	    //Call C: Cook!
+	    
 	    return;
 	}    
 	else{
 	    System.out.println("Sorry I didn't quite get that...");
 	    dashboard();
 	}
+    }
+
+    public void A(){
+	Customer woosuk = new Customer("I want Hamburger!");
+	customerList.enqueue(woosuk);
+    }
+    
+    public void B(){
+	customerList.peekFront().getOrder();
     }
 
     public String dashboard(){
@@ -80,13 +119,13 @@ public class Restaurant{
     public static void main( String[] args ){
 	Restaurant admin = new Restaurant();
 
+	admin.customerList = new ALQueue<Customer>();
+	
 	System.out.println("Blah blah blah... you got a restaurant blah blah blah");
 
 	admin.intro();
 
-	//TODO: MAKE COOK FRED FOR THIS
-	//	String name = Keyboard.readString();
-	//      Cook fred = new Cook(name);
+	admin.makeCook();	
 	
 	admin.display();
 
