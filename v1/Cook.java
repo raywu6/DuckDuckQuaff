@@ -33,25 +33,25 @@ public class Cook {
 
 
     public int find(String str) {
-	String[] inv = Restaurant.inventory;
-	int indexLastElem = Restaurant.inventory.length - 1;
+	ArrayList<String> inv = Restaurant.inventory;
+	int indexLastElem = Restaurant.inventory.size() - 1;
 	
 	return binarySearch(inv, str, 0, indexLastElem);
     }
 
 
-    public int binarySearch(String[] arr, String target, int lo, int hi) {
+    public int binarySearch(ArrayList<String> arr, String target, int lo, int hi) {
 
 	// bounds have not crossed
 	while (lo <= hi) {
 	    int med = (lo + hi) / 2;
 
 	    // if found target
-	    if ( arr[med].compareTo(target) == 0 )
+	    if ( arr.get(med).compareTo(target) == 0 )
 		return med;
 
 	    // target < med, look at lower half of data
-	    else if ( arr[med].compareTo(target) > 0 )
+	    else if ( arr.get(med).compareTo(target) > 0 )
 		hi = med - 1;
 
 	    // target > med, look at upper half of data
@@ -75,7 +75,7 @@ public class Cook {
 		System.out.println("You already have this item!");
 	    
 	    else
-		ingredientsOnHand.add( Restaurant.inventory[index] );
+		ingredientsOnHand.add( Restaurant.inventory.get(index) );
 	}
 	
 	else
@@ -137,7 +137,7 @@ public class Cook {
     // helper method for cook()
     public static String getNextOrder() {
 	
-	Customer custObj = Restaurant.customerQueue.get(0);
+	Customer custObj = Restaurant.customerQueue.peekFront();
 	String order = custObj.getOrder();
 	
 
