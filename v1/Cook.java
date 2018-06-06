@@ -70,7 +70,7 @@ public class Cook {
 	// if str is valid item in restaurant's inventory
 	if ( index != -1 ) {
 
-	    // if already have ingredient in hand
+	    // if already have ingredent in hand
 	    if ( ingredientsOnHand.contains(str) )
 		System.out.println("You already have this item!");
 	    
