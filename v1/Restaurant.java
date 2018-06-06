@@ -5,14 +5,16 @@ import java.util.HashMap;
     
 public class Restaurant{
 
-    private String restaurantName;
+    private String restaurantName, cookName;
     public static String[] inventory;
     public ALQueue<Customer> customerList;
     public HashMap<String,String[]> menu;
+    public String itemA, itemB, itemC, itemD, itemE;
+    public String[] aIng, bIng, cIng, dIng, eIng;
 
     public Restaurant(){
 	String[] inventory = { "Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Suger", "Tomato" };
-	customerList = new ALQueue<Customer>();
+	ALQueue<Customer> customerList = new ALQueue<Customer>();
 	for (int i = 0; i < 10; i++) {
 	    Customer fred = new Customer();
 	    fred.setOrder();
@@ -23,15 +25,23 @@ public class Restaurant{
     }
 
     public void setupMenu(){
-	//menu.put(String "BLT", String[] {"Bacon", "Bread", "Lettuce", "Tomato"});
-	//menu.put(String "Cheeseburger", String[] {"Bread", "Burger", "Cheese", "Lettuce", "Tomato"});
-	//menu.put(String "Hamburger", String[] {"Bread", "Burger", "Cheese", "Lettuce", "Tomato"});
-	//menu.put(String "Hot Dog", String[] {"Bread", "Ketchup", "Sausage"});
-	//menu.put(String "Thai Tea", String[] {"Black Tea", "Milk", "Sugar"});
-    }
+	String itemA = "BLT";
+	String itemB = "Cheeseburger";
+	String itemC = "Hamburger";
+	String itemD = "Hot Dog";
+	String itemE = "Thai Tea";
 
-    public void setRestaurantName( String rName ){
-	restaurantName = rName;
+	String[] aIng = {"Bacon", "Bread", "Lettuce", "Tomato"};
+	String[] bIng = {"Bread", "Burger", "Cheese", "Lettuce", "Tomato"};
+	String[] cIng = {"Bread", "Burger", "Lettuce", "Tomato"};
+	String[] dIng = {"Bread", "Ketchup", "Sausage"};
+	String[] eIng = {"Black Tea", "Milk", "Sugar"};
+	
+	menu.put(itemA, aIng);
+	menu.put(itemB, bIng);
+	menu.put(itemC, cIng);
+	menu.put(itemD, dIng);
+	menu.put(itemE, eIng);
     }
 
     public void intro(){
@@ -41,7 +51,7 @@ public class Restaurant{
 	    System.out.println("Okay! What is the name you chose?");
 	    String b = Keyboard.readString();    
 	    setRestaurantName(b);
-	    System.out.println(b+"? Wonderful name! Good luck with your new restaurant!");
+	    System.out.println(restaurantName+"? Wonderful name! Good luck with your new restaurant!");
 	    return;
 	}
 	if ( a.equalsIgnoreCase("No") ){
@@ -55,14 +65,29 @@ public class Restaurant{
 
     }
 
+    
+    public void setRestaurantName( String rName ){
+	restaurantName = rName;
+    }
+    
     public void makeCook(){
+        System.out.println("\n");
 	System.out.println("Now that you have your own restaurant, you'll need a cook. Have you determined a name for your cook? (Type Yes/No)");
+        System.out.println("\n");
+
 	String a = Keyboard.readString();
+
+        System.out.println("\n");
+
 	if ( a.equalsIgnoreCase("Yes") ){
 	    System.out.println("Okay! What is your cook's name?");
-	    String b = Keyboard.readString();    
+	    
+	    System.out.println("\n");
+	
+	    String b = Keyboard.readString();
+	    cookName = b;
 	    Cook myCook = new Cook(b);
-	    System.out.println(b+"? Welcome to the team! Lets get started by heading over to the dashboard!");
+	    System.out.println(cookName+"? Welcome to the team! Lets get started by heading over to the dashboard!");
 	    return;
 	}
 	if ( a.equalsIgnoreCase("No") ){
@@ -108,8 +133,12 @@ public class Restaurant{
     public String dashboard(){
 	String retStr = "";
 	retStr += "\n";
+	retStr += "<  ";
 	retStr += restaurantName;
-	retStr += " Dashboard";
+	retStr += "  >";
+	retStr += "\n";
+	retStr += cookName;
+	retStr += "'s Dashboard";
 	retStr += "\n";
 	retStr += "--------------------";
 	retStr += "\n";
