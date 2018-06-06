@@ -79,7 +79,7 @@ public class Restaurant{
 	//String[] dIng = {"bread", "ketchup", "sausage"};
 	//String[] eIng = {"black tea", "milk", "sugar"};
 	
-	menu.put("BLT", {"bacon", "bread", "lettuce", "tomato"});
+	menu.put(itemA, aIng);
 	menu.put(itemB, bIng);
 	menu.put(itemC, cIng);
 	menu.put(itemD, dIng);
