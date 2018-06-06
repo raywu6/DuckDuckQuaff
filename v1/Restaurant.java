@@ -84,6 +84,11 @@ public class Restaurant{
 	}
     }
 
+    public void A(){
+	Customer woosuk = new Customer("Woosuk");
+	customerList.add();
+    }
+
     public String dashboard(){
 	String retStr = "";
 	retStr += "\n";
