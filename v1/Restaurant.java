@@ -13,6 +13,7 @@ public class Restaurant{
     public static HashMap<String,ArrayList<String>> menu;
     private String itemA, itemB, itemC, itemD, itemE;
     private ArrayList<String> aIng, bIng, cIng, dIng, eIng;
+    private static Cook myCook;
 
     public Restaurant(){
 	ArrayList<String> inventory = new ArrayList<String>();
@@ -127,7 +128,8 @@ public class Restaurant{
 	
 	    String b = Keyboard.readString();
 	    cookName = b;
-	    Cook myCook = new Cook(b);
+	    
+	    myCook = new Cook(b);
 	    System.out.println(cookName+"? Welcome to the team! Lets get started by heading over to the dashboard!");
 	    return;
 	}
@@ -150,13 +152,18 @@ public class Restaurant{
 	if ( a == 1 ){
 	    System.out.println("<A>");
 	    //Call A: Get recipe
-	    
+	    Customer nextCust = customerQueue.peekFront();
+	    String orderedItem = nextCust.getOrder();
+	    ArrayList<String> ingred = menu.get(orderedItem);
 	    return;
 	}
 	if ( a == 2 ){
 	    System.out.println("<B>");
 	    //Call B: Look for ingredients
+	    System.out.println(inventory);  // show inventory to user
 	    
+	    String input = Keyboard.readString();
+	    myCook.addIngredient(input);
 	    return;
 	}
 	if ( a == 3 ){
