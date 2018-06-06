@@ -8,6 +8,7 @@ import java.util.HashMap;
 public class Restaurant{
 
     private String restaurantName, cookName;
+    public static ArrayList<String> menuItemNames;
     public static ArrayList<String> inventory;
     public static ALQueue<Customer> customerQueue;
     public static HashMap<String,ArrayList<String>> menu;
@@ -29,10 +30,17 @@ public class Restaurant{
 	inventory.add("Sugar");
 	inventory.add("Tomato");
 	//"Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Sugar", "Tomato"};
+
+	menuItemNames = new ArrayList<String>();
+	menuItemNames.add("BLT");
+	menuItemNames.add("Cheeseburger");
+	menuItemNames.add("Hamburger");
+	menuItemNames.add("Hot Dog");
+	menuItemNames.add("Thai Iced Tea");
 	
 	customerQueue = new ALQueue<Customer>();
 	
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 5; i++) {
 	    Customer fred = new Customer();
 	    fred.setOrder();
 	    customerQueue.enqueue(fred);
@@ -47,7 +55,7 @@ public class Restaurant{
 	itemB = "Cheeseburger";
 	itemC = "Hamburger";
 	itemD = "Hot Dog";
-	itemE = "Thai Tea";
+	itemE = "Thai Iced Tea";
 
 	aIng = new ArrayList<String>();
         aIng.add("Bacon");
@@ -155,6 +163,7 @@ public class Restaurant{
 	    String orderedItem = nextCust.getOrder();
 	    ArrayList<String> ingred = menu.get(orderedItem);
 
+	    System.out.println(orderedItem);
 	    System.out.println(ingred);
 	    
 	    return;
@@ -188,8 +197,7 @@ public class Restaurant{
 	retStr += restaurantName;
 	retStr += "  >";
 	retStr += "\n";
-	retStr += cookName;
-	retStr += "'s Dashboard";
+	retStr += "Your Dashboard";
 	retStr += "\n";
 	retStr += "--------------------";
 	retStr += "\n";
@@ -205,7 +213,7 @@ public class Restaurant{
     public static void main( String[] args ){
 	Restaurant admin = new Restaurant();
 	
-	System.out.println("Blah blah blah... you got a restaurant blah blah blah");
+	System.out.println("Welcome to the Restaurant Simulayshun!");
 	admin.intro();
 
 	adam = new Cook();
@@ -214,7 +222,7 @@ public class Restaurant{
 
 	    String formatHand = "Currently in hand: [";
 	    for (String item : adam.ingredientsOnHand) 
-		formatHand += item + ",";
+		formatHand += item + ", ";
 	    System.out.println( formatHand + "]" );
 	   
 	    

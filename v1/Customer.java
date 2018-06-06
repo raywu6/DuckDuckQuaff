@@ -14,8 +14,8 @@ public class Customer{
     }
 
     public void setOrder(){
-	order = null;
-	//TODO: MAKE A RANDOMIZER FOR THE ORDER
+	int randInt = (int) (Math.random() * 5);
+	order = Restaurant.menuItemNames.get(randInt);
     }
     
     /**********************************************************************************************************    
