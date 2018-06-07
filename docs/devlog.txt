@@ -8,7 +8,7 @@ Wok Wok
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 
+- Obstacles arose when we implemented the actual code into Java. We had to keep the codes consistent and well-commented to make it easier to work with in the future. There were also a lot of small errors that caused the code to not compile, and sometimes it took a considerable amount of time to just look for those small things.
 
 
 UNRESOLVED ISSUES
@@ -18,7 +18,7 @@ UNRESOLVED ISSUES
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--
+- It was interesting to know the Java version of the dicitionaries from Python (which are called HashMaps). The HashMap came in really handed for this project because they contained the ingredients required to make a certain good in our game, and it was used to compare what the user collected for the ingredient and what the actual ingredient for a certain food was.
 
 
 MID-DEVELOPMENT DESIGN CHANGES
@@ -28,7 +28,7 @@ MID-DEVELOPMENT DESIGN CHANGES
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--
+- It is really important to stay organized throughout the whole process. Our group thoroughly planned out (for the majority of the time given for the project) and envisioned the game before implementing it in code. We also kept different versions (v1,v2, etc) to keep track of priorities and to add additional features to previous versions.
 
 
  ______   ______   __   __   __       ______   _______     
@@ -40,6 +40,12 @@ LESSONS LEARNED
     \____/_/ \_____\/ \___/_/   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+2018-06-06
+---------------------------------------------------------------
+Ryan Kim    :: Worked together to finish the working version of the project
+Woosuk Lee :: Worked together to finish the working version of the project, modified READMME, updated devlog
+Raymond Wu ::  Worked together to finish the working version of the project, uploaded the modified codes.
 
 2018-06-01
 --------------------------------------------------------------
@@ -60,9 +66,3 @@ Ryan Kim   :: Worked together to finalize final project idea
 Woosuk Lee :: Worked together to finalize final project idea
 Raymond Wu :: Worked together to finalize final project idea, uploaded proposal
 ==============================================================
-
-2018-06-06
----------------------------------------------------------------
-Ryan Kim    :: Worked together to finish the working version of the project
-Woosuk Lee :: Worked together to finish the working version of the project, modified READMME, updated devlog
-Raymond Wu ::  Worked together to finish the working version of the project, uploaded the modified codes.
