@@ -121,7 +121,7 @@ public class Restaurant{
     
     
     public void display(){
-	System.out.println("Here is your dashboard for today.");
+	System.out.println("\nHere is your dashboard for today.");
 	System.out.println(dashboard());
 	System.out.println("Select 1, 2, or 3.");
 	int a = Keyboard.readInt();
@@ -179,12 +179,14 @@ public class Restaurant{
 	retStr += "\n";
 	retStr += "(3)|<Cook>---";
 	retStr += "\n";
-    retStr += "Your current salary: $" + adam.getMoney() + "0";
+	retStr += "Your current salary: $" + adam.getMoney() + "0";
 	return retStr;
     }
     
     public static void main( String[] args ){
 	Restaurant admin = new Restaurant();
+
+	double startTime = System.currentTimeMillis();
 	
 	System.out.println("Welcome to the Restaurant Simulayshun!");
 	admin.intro();
@@ -201,6 +203,15 @@ public class Restaurant{
 	    
 	    admin.display();
 	} // end while loop
+
+	double endTime = System.currentTimeMillis();
+
+	double deltaTimeSeconds = (endTime - startTime) / 1000;
+
+	//clear screen
+	System.out.println( "[2J" );
+	System.out.println( "You finished in: " + deltaTimeSeconds + " sec.");
+	System.out.println( "You currently have... $" + adam.getMoney());
     }
 
 }
