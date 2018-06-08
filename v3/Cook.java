@@ -116,13 +116,13 @@ public class Cook {
 	    timeStartOrder = timeEndOrder;
 	    System.out.println( "You completed the order in " + timeOfOrder/1000 + " sec.");
 
-	    // within 8 seconds: $5 tip
+	    // within 10 seconds: $5 tip
 	    // every second after... -$1 in tip
-	    if (timeOfOrder <= 13000)  {// if within 13 seconds
-		if (timeOfOrder <= 8000) 
+	    if (timeOfOrder <= 15000)  {// if within 15 seconds
+		if (timeOfOrder <= 10000) 
 		    tips = 5;
 		else 
-		    tips = 5 - (timeOfOrder/1000 - 8);
+		    tips = 5 - (timeOfOrder/1000 - 10);
 	    }
 	 
 
