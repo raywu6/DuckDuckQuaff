@@ -14,7 +14,7 @@ public class Restaurant{
     public static HashMap<String,ArrayList<String>> menu;
     private String itemA, itemB, itemC, itemD, itemE;
     private ArrayList<String> aIng, bIng, cIng, dIng, eIng;
-    private static Cook adam;
+    private static Cook adam = new Cook();
 
     public Restaurant(){
 	inventory = new ArrayList<String>();
@@ -179,6 +179,7 @@ public class Restaurant{
 	retStr += "\n";
 	retStr += "(3)|<Cook>---";
 	retStr += "\n";
+    retStr += "Your current salary: $" + adam.getMoney() + "0";
 	return retStr;
     }
     
@@ -188,7 +189,7 @@ public class Restaurant{
 	System.out.println("Welcome to the Restaurant Simulayshun!");
 	admin.intro();
 
-	adam = new Cook();
+	
 
 	while ( !customerQueue.isEmpty() ) {
 
