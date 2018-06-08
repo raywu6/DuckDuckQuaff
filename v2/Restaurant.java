@@ -119,37 +119,6 @@ public class Restaurant{
 	restaurantName = rName;
     }
     
-    // public void makeCook(){
-    //     System.out.println("\n");
-    // 	System.out.println("Now that you have your own restaurant, you'll need a cook. Have you determined a name for your cook? (Type Yes/No)");
-    //     System.out.println("\n");
-
-    // 	String a = Keyboard.readString();
-
-    //     System.out.println("\n");
-
-    // 	if ( a.equalsIgnoreCase("Yes") ){
-    // 	    System.out.println("Okay! What is your cook's name?");
-	    
-    // 	    System.out.println("\n");
-	
-    // 	    String b = Keyboard.readString();
-    // 	    cookName = b;
-	    
-    // 	    myCook = new Cook(b);
-    // 	    System.out.println(cookName+"? Welcome to the team! Lets get started by heading over to the dashboard!");
-    // 	    return;
-    // 	}
-    // 	else if ( a.equalsIgnoreCase("No") ){
-    // 	    System.out.println("No worries, take your time!");
-    // 	    makeCook();
-    // 	}    
-    // 	else{
-    // 	    System.out.println("Sorry I didn't quite get that...");
-    // 	    makeCook();
-    // 	}
-
-    // }
     
     public void display(){
 	System.out.println("Here is your dashboard for today.");
