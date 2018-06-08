@@ -1,9 +1,8 @@
-/*
-  Larry Wong and Ryan Kim (Kimchi gone Wong)
-  APCS2 pd8
-  HW35 -- ...Nor Do Aussies
-  2018-04-15
-*/
+// DuckDuckQuaff (Ryan Kim, Woosuk Lee, Raymond Wu)
+// APCS2 pd8
+// Final project
+// 2018-06-08
+
 import java.util.ArrayList;
 
 public class ALQueue<Quasar> implements Queue<Quasar>

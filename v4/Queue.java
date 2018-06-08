@@ -1,3 +1,8 @@
+// DuckDuckQuaff (Ryan Kim, Woosuk Lee, Raymond Wu)
+// APCS2 pd8
+// Final project
+// 2018-06-08
+
 /*****************************************************
  * interface Queue
  * Includes only methods listed in AP subset of Java
