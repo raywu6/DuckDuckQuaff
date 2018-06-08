@@ -101,6 +101,8 @@ public class Restaurant{
 	    String b = Keyboard.readString();    
 	    setRestaurantName(b);
 	    System.out.println(restaurantName+"? Wonderful name! Good luck with your new restaurant!");
+
+	    System.out.println("\nTIME STARTS NOW. Complete orders as fast as you can to obtain the maximum amount of tips!\n");
 	    return;
 	}
 	if ( a.equalsIgnoreCase("No") ){
@@ -123,6 +125,7 @@ public class Restaurant{
     public void display(){
 	System.out.println("\nHere is your dashboard for today.");
 	System.out.println(dashboard());
+        System.out.printf("Your current salary: $%.2f\n", adam.getMoney());
 	System.out.println("Select 1, 2, or 3.");
 	int a = Keyboard.readInt();
 
@@ -179,7 +182,6 @@ public class Restaurant{
 	retStr += "\n";
 	retStr += "(3)|<Cook>---";
 	retStr += "\n";
-	retStr += "Your current salary: $" + adam.getMoney() + "0";
 	return retStr;
     }
     
@@ -211,7 +213,7 @@ public class Restaurant{
 	//clear screen
 	System.out.println( "[2J" );
 	System.out.println( "You finished in: " + deltaTimeSeconds + " sec.");
-	System.out.println( "You currently have... $" + adam.getMoney());
+	System.out.println( "You currently have... $" + adam.getMoney() + "0");
     }
 
 }

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Cook {
 
     // inst vars
-    public String name; // *************************8  if not used delete...
+    private double timeStartOrder, timeEndOrder, timeOfOrder;
     public ArrayList<String> ingredientsOnHand;
     private double salary;
 
@@ -11,14 +11,9 @@ public class Cook {
     // b/c its size will be constantly changing...
     
     public Cook() {
-	name = "John Doe";
+	timeStartOrder = timeEndOrder = timeOfOrder = System.currentTimeMillis();
 	ingredientsOnHand = new ArrayList<String>();
 	salary = 0;
-    }
-
-    public Cook (String myName) {
-	this();          // call default constructor
-	name = myName;   // overwrite default name with specified name
     }
 
 
@@ -112,6 +107,28 @@ public class Cook {
 		       Restaurant.menu.get(getNextOrder()) ) ) {
 	    System.out.println("Success! Customer dequeued. +$10");
 	    setMoney(10);
+
+	    // calculate tips
+	    double tips = 0.0;
+	    
+	    timeEndOrder = System.currentTimeMillis();
+	    timeOfOrder = timeEndOrder - timeStartOrder;
+	    timeStartOrder = timeEndOrder;
+	    System.out.println( "You completed the order in " + timeOfOrder/1000 + " sec.");
+
+	    // within 8 seconds: $5 tip
+	    // every second after... -$1 in tip
+	    if (timeOfOrder <= 13000)  {// if within 13 seconds
+		if (timeOfOrder <= 8000) 
+		    tips = 5;
+		else 
+		    tips = 5 - (timeOfOrder/1000 - 8);
+	    }
+	 
+
+	    System.out.printf( "You get $%.2f in tips!\n", tips);
+	    salary += tips;
+	    
 	    Restaurant.customerQueue.dequeue();
 	    ingredientsOnHand.clear();
 
@@ -171,16 +188,4 @@ public class Cook {
     }
     
 
-    // for testing only
-    public static void main (String[] args) {
-	Cook a = new Cook();
-	System.out.println("name: " + a.name);
-	System.out.println("salary: " + a.salary);
-
-	Cook b = new Cook("Fred");
-	System.out.println("name: " + b.name);
-	System.out.println("salary: " + b.salary);
-	
-    } // end main method
-	
 } // end class Cook
