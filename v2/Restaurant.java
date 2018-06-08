@@ -125,6 +125,9 @@ public class Restaurant{
 	System.out.println(dashboard());
 	System.out.println("Select 1, 2, or 3.");
 	int a = Keyboard.readInt();
+
+	//clear screen
+	System.out.println( "[2J" ); 
 	if ( a == 1 ){
 	    System.out.print("GET RECIPE... ");
 	    //Call A: Get recipe
