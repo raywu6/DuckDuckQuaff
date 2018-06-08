@@ -30,6 +30,7 @@ MID-DEVELOPMENT DESIGN CHANGES
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - It is really important to stay organized throughout the whole process. Our group thoroughly planned out (for the majority of the time given for the project) and envisioned the game before implementing it in code. We also kept different versions (v1,v2, etc) to keep track of priorities and to add additional features to previous versions.
+-Continual testings and improvisations were priceless.
 
 
  ______   ______   __   __   __       ______   _______     
