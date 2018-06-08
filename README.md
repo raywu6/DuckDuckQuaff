@@ -27,3 +27,9 @@ APCS2 final project, by Seong Hyeon (Ryan) Kim, Woosuk Lee, Raymond Wu
 ### Launch instructions
 1. `javac Restauraut.java`
 2. `java Restaurant`
+
+### Different Versions
+* v1: Basic game. Typing in ingredients and cooking them to serve the food to the enqueued customers. Number of customers is only 5.
+* v2: Time functionality added. Depending on how fast the food is served, more tips may be given to the user.
+* v3: Number of customers is randomized between 5 and 15.
+* v4: Augmented menu (from 5 to 9 different selections). Also added Woo.java to make compilation/runnability more convenient!
