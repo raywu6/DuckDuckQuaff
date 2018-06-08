@@ -10,9 +10,9 @@ APCS2 final project, by Seong Hyeon (Ryan) Kim, Woosuk Lee, Raymond Wu
 * The clock then stops ticking, and the salary based on how many orders were successfully completed and whether or not the simulation was completed within the suggested time is shown.
 
 ### How it works
-* The screen is cleared with the command 'System.out.println("\f")' which clears the users terminal by placing a page break.
+* The screen is cleared with the command `System.out.println("\f")` which clears the users terminal by placing a page break.
 * When the user launches the program, the username prompt is initiated by calling the `readString()` method in `cs1/Keyboard.java`.
-* String class methods '.toUpperCase()' and '.toLowerCase()' are used for case-insensitivity for keyboard responses.
+* String class methods `.toUpperCase()` and `.toLowerCase()` are used for case-insensitivity for keyboard responses.
 * The clock begins ticking by storing value of the `System.currentTimeMillis()` method in a variable, and the suggested time is calculated based on the amount of customers. 
 * The customers are stored in a queue that is implemented in an ArrayList. 
 * The user's menu selection is initiated through the `readInt()` method in `cs1/Keyboard.java`. 
