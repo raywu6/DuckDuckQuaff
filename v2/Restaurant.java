@@ -190,7 +190,7 @@ public class Restaurant{
 
 	adam = new Cook();
 
-	while ( ! admin.customerQueue.isEmpty() ) {
+	while ( !customerQueue.isEmpty() ) {
 
 	    String formatHand = "Currently in hand: [";
 	    for (String item : adam.ingredientsOnHand) 
