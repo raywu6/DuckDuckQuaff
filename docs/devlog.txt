@@ -47,7 +47,7 @@ LESSONS LEARNED
 ---------------------------------------------------------------
 Ryan Kim    :: Worked together to finish the working version of the project, modified README
 Woosuk Lee :: Worked together to finish the working version of the project, modified README, updated devlog
-Raymond Wu ::  Worked together to finish the working version of the project, uploaded the modified codes.
+Raymond Wu ::  Worked together to finish the working version of the project, added time functionality, uploaded the modified codes.
 
 2018-06-01
 --------------------------------------------------------------
