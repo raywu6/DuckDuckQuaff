@@ -25,8 +25,10 @@ APCS2 final project, by Seong Hyeon (Ryan) Kim, Woosuk Lee, Raymond Wu
 * If the user has  completed the simulation within the suggested time, a bonus is added to his or her bank. 
 
 ### Launch instructions
-1. `javac Restauraut.java`
-2. `java Restaurant`
+0. `git clone git@github.com:raywu6/DuckDuckQuaff.git`
+1. `cd DuckDuckQuaff/v4`
+2. `javac Woo.java`
+3. `java Woo`
 
 ### Different Versions
 * v1: Basic game. Typing in ingredients and cooking them to serve the food to the enqueued customers. Number of customers is only 5.
