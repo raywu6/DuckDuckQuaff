@@ -39,8 +39,10 @@ public class Restaurant{
 	menuItemNames.add("Thai Iced Tea");
 	
 	customerQueue = new ALQueue<Customer>();
+
+	int numCustomers = (int) (Math.random()* 11 + 5); ; // [5,15]
 	
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < numCustomers; i++) {
 	    Customer fred = new Customer();
 	    fred.setOrder();
 	    customerQueue.enqueue(fred);
