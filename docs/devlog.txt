@@ -43,11 +43,17 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+2018-06-07
+---------------------------------------------------------------
+Ryan Kim   :: Worked together to finish the second version of the project, modified README, updated devlog, researched screen clear/page break ANSI code
+Woosuk Lee :: Worked together to finish the second version of the project, modified README, updated devlog, added Cook instance in Restaurant
+Raymond Wu :: Worked together to finish the second version of the project, added time functionality, uploaded the modified codes
+
 2018-06-06
 ---------------------------------------------------------------
-Ryan Kim    :: Worked together to finish the working version of the project, modified README
+Ryan Kim   :: Worked together to finish the working version of the project, modified README
 Woosuk Lee :: Worked together to finish the working version of the project, modified README, updated devlog
-Raymond Wu ::  Worked together to finish the working version of the project, added time functionality, uploaded the modified codes.
+Raymond Wu :: Worked together to finish the working version of the project, uploaded the modified codes
 
 2018-06-01
 --------------------------------------------------------------
