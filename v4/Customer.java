@@ -14,7 +14,7 @@ public class Customer{
     }
 
     public void setOrder(){
-	int randInt = (int) (Math.random() * 5);
+	int randInt = (int) (Math.random() * 9);
 	order = Restaurant.menuItemNames.get(randInt);
     }
     

@@ -12,8 +12,8 @@ public class Restaurant{
     public static ArrayList<String> inventory;
     public static ALQueue<Customer> customerQueue;
     public static HashMap<String,ArrayList<String>> menu;
-    private String itemA, itemB, itemC, itemD, itemE;
-    private ArrayList<String> aIng, bIng, cIng, dIng, eIng;
+    private String itemA, itemB, itemC, itemD, itemE, itemF, itemG, itemH, itemI;
+    private ArrayList<String> aIng, bIng, cIng, dIng, eIng, fIng, gIng, hIng, iIng;
     private static Cook adam;
     public static int custNow;
     private static int custTotal;
@@ -25,17 +25,20 @@ public class Restaurant{
 	
 	inventory = new ArrayList<String>();
 	inventory.add("Bacon");
+	inventory.add("Banana");
 	inventory.add("Black Tea");
 	inventory.add("Bread");
 	inventory.add("Burger");
 	inventory.add("Cheese");
+	inventory.add("Ice");
 	inventory.add("Ketchup");
+	inventory.add("Lemon Juice");
 	inventory.add("Lettuce");
 	inventory.add("Milk");
 	inventory.add("Sausage");
+	inventory.add("Strawberry");
 	inventory.add("Sugar");
 	inventory.add("Tomato");
-	//"Bacon", "Black Tea", "Bread", "Burger", "Ketchup", "Lettuce", "Milk", "Sausage", "Sugar", "Tomato"};
 
 	menuItemNames = new ArrayList<String>();
 	menuItemNames.add("BLT");
@@ -43,6 +46,10 @@ public class Restaurant{
 	menuItemNames.add("Hamburger");
 	menuItemNames.add("Hot Dog");
 	menuItemNames.add("Thai Iced Tea");
+	menuItemNames.add("Strawberry Milkshake");
+	menuItemNames.add("Banana Milkshake");
+	menuItemNames.add("Strawberry Banana Smoothie");
+	menuItemNames.add("Lemonade");
 	
 	customerQueue = new ALQueue<Customer>();
 
@@ -65,6 +72,10 @@ public class Restaurant{
 	itemC = "Hamburger";
 	itemD = "Hot Dog";
 	itemE = "Thai Iced Tea";
+	itemF = "Strawberry Milkshake";
+	itemG = "Banana Milkshake";
+	itemH = "Strawberry Banana Smoothie";
+	itemI = "Lemonade";
 
 	aIng = new ArrayList<String>();
         aIng.add("Bacon");
@@ -94,12 +105,37 @@ public class Restaurant{
 	eIng.add("Black Tea");
         eIng.add("Milk");
 	eIng.add("Sugar");
-        
+
+	fIng = new ArrayList<String>();
+	fIng.add("Milk");
+	fIng.add("Strawberry");
+	fIng.add("Sugar");
+
+	gIng = new ArrayList<String>();
+	gIng.add("Banana");
+	gIng.add("Milk");
+	gIng.add("Sugar");
+
+	hIng = new ArrayList<String>();
+	hIng.add("Banana");
+	hIng.add("Milk");
+	hIng.add("Strawberry");
+	hIng.add("Sugar");
+
+	iIng = new ArrayList<String>();
+	iIng.add("Ice");
+	iIng.add("Lemon Juice");
+	iIng.add("Sugar");
+       
 	menu.put(itemA, aIng);
 	menu.put(itemB, bIng);
 	menu.put(itemC, cIng);
 	menu.put(itemD, dIng);
 	menu.put(itemE, eIng);
+	menu.put(itemF, fIng);
+	menu.put(itemG, gIng);
+	menu.put(itemH, hIng);
+	menu.put(itemI, iIng);
     }
 
     public void intro(){
