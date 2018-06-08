@@ -41,17 +41,19 @@ public class Cook {
 
 
     public int binarySearch(ArrayList<String> arr, String target, int lo, int hi) {
+	// case-INSENSITIVE
+	target = target.toLowerCase();
 
 	// bounds have not crossed
 	while (lo <= hi) {
 	    int med = (lo + hi) / 2;
 
 	    // if found target
-	    if ( arr.get(med).compareTo(target) == 0 )
+	    if ( arr.get(med).toLowerCase().compareTo(target) == 0 )
 		return med;
 
 	    // target < med, look at lower half of data
-	    else if ( arr.get(med).compareTo(target) > 0 )
+	    else if ( arr.get(med).toLowerCase().compareTo(target) > 0 )
 		hi = med - 1;
 
 	    // target > med, look at upper half of data
