@@ -13,7 +13,9 @@ OBSTACLES OVERCOME
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- We were unable to implement the PriorityQueue for VIP customers.
+- We wished to implement the following features in our simulation:
+  - a PriorityQueue for VIP customers
+  - using Processing for a more visual UI
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,7 +48,7 @@ LESSONS LEARNED
 ---------------------------------------------------------------
 Ryan Kim   :: Worked together to finish the second version of the project, modified README, updated devlog, researched screen clear/page break ANSI code
 Woosuk Lee :: Worked together to finish the second version of the project, modified README, updated devlog, added Cook instance in Restaurant
-Raymond Wu :: Worked together to finish the second version of the project, added time functionality, uploaded the modified codes
+Raymond Wu :: Worked together to finish the second version of the project, added time functionality, uploaded the modified codes, updated devlog, flowchart, and uml
 
 2018-06-06
 ---------------------------------------------------------------

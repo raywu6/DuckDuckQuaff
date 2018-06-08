@@ -7,7 +7,7 @@ import java.util.HashMap;
     
 public class Restaurant{
 
-    private String restaurantName, cookName;
+    private String restaurantName;
     public static ArrayList<String> menuItemNames;
     public static ArrayList<String> inventory;
     public static ALQueue<Customer> customerQueue;
@@ -235,7 +235,7 @@ public class Restaurant{
 
 	double startTime = System.currentTimeMillis();
 	
-	System.out.println("Welcome to the Restaurant Simulayshun!");
+	System.out.println("Welcome to the Restaurant Simulation!");
 	admin.intro();
 
 	
