@@ -14,9 +14,15 @@ public class Restaurant{
     public static HashMap<String,ArrayList<String>> menu;
     private String itemA, itemB, itemC, itemD, itemE;
     private ArrayList<String> aIng, bIng, cIng, dIng, eIng;
-    private static Cook adam = new Cook();
+    private static Cook adam;
+    public static int custNow;
+    private static int custTotal;
 
     public Restaurant(){
+
+	adam = new Cook();
+	custNow = 0;
+	
 	inventory = new ArrayList<String>();
 	inventory.add("Bacon");
 	inventory.add("Black Tea");
@@ -41,6 +47,7 @@ public class Restaurant{
 	customerQueue = new ALQueue<Customer>();
 
 	int numCustomers = (int) (Math.random()* 11 + 5); ; // [5,15]
+	custTotal = numCustomers - 1; // facilitate with start count from 0
 	
 	for (int i = 0; i < numCustomers; i++) {
 	    Customer fred = new Customer();
@@ -125,9 +132,9 @@ public class Restaurant{
     
     
     public void display(){
-	System.out.println("\nHere is your dashboard for today.");
 	System.out.println(dashboard());
         System.out.printf("Your current salary: $%.2f\n", adam.getMoney());
+	System.out.println("Now serving: Customer " + custNow + " of " + custTotal);
 	System.out.println("Select 1, 2, or 3.");
 	int a = Keyboard.readInt();
 
@@ -215,7 +222,7 @@ public class Restaurant{
 	//clear screen
 	System.out.println( "[2J" );
 	System.out.println( "You finished in: " + deltaTimeSeconds + " sec.");
-	System.out.println( "You currently have... $" + adam.getMoney() + "0");
+	System.out.printf( "You currently have... $%.2f\n",adam.getMoney());
     }
 
 }

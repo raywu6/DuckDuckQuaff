@@ -130,6 +130,7 @@ public class Cook {
 	    salary += tips;
 	    
 	    Restaurant.customerQueue.dequeue();
+	    Restaurant.custNow++;
 	    ingredientsOnHand.clear();
 
 	    return true;
